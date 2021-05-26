@@ -40,7 +40,11 @@ public class Trial  implements Serializable{
 	@Column(nullable = false)
 	private String place;
 	
-	public Trial(String status, Date start, String ageRange, String sexTargeted, String conditions, String link, String place) {
+	
+	protected Trial() {}
+	
+	public Trial(String title, String status, Date start, String ageRange, String sexTargeted, String conditions, String link, String place) {
+		this.title = title;
 		this.status = status;
 		this.start = start;
 		this.ageRange = ageRange;
