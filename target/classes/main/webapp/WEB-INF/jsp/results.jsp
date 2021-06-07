@@ -50,7 +50,7 @@ $(document).ready( function () {
     			<td><c:out value="${trial.status}"/></td>
     			<td><c:out value="${trial.start}"/></td>
     			<td><c:out value="${trial.ageRange}"/></td>
-    			<td><c:out value="${trial.sexTargeted}"/></td>
+    			<td><c:out value="${trial.gender}"/></td>
     			<td><c:out value="${trial.conditions}"/></td>
     			<td><c:out value="${trial.place}"/></td>
     			<td><a href='<c:out value="${trial.link}"/>'>En savoir plus</a></td>

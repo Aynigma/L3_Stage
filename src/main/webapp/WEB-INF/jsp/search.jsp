@@ -72,9 +72,9 @@
 			<div class="form-group">
 			<label for="gender">Sexe :</label>
 			<select id="gender" name="gender">
+				<option value="All" selected>Tous</option>
 				<option value="M">Homme</option>
 				<option value="F">Femme</option>
-				<option value="Other">Autre</option>
 			</select> 
 			</div>
 			<br /> 

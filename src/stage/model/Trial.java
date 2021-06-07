@@ -1,8 +1,6 @@
 package stage.model;
 
 import java.io.Serializable;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,45 +8,47 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Trial  implements Serializable{
+public class Trial implements Serializable{
+	
+	//title: 428, conditions: 5024, place: 54728
 
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, length = 500)
 	private String title;
 	
 	@Column(nullable = false)
 	private String status;
 	
 	@Column(nullable = false)
-	private Date start;
+	private String start;
 	
 	@Column(nullable = false)
 	private String ageRange;
 	
 	@Column(nullable = false)
-	private String sexTargeted;
+	private String gender;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, length = 5500)
 	private String conditions;
 	
 	@Column(nullable = false)
 	private String link;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, length = 5500)
 	private String place;
 	
 	
 	protected Trial() {}
 	
-	public Trial(String title, String status, Date start, String ageRange, String sexTargeted, String conditions, String link, String place) {
+	public Trial(String title, String status, String start, String ageRange, String sexTargeted, String conditions, String link, String place) {
 		this.title = title;
 		this.status = status;
 		this.start = start;
 		this.ageRange = ageRange;
-		this.sexTargeted = sexTargeted;
+		this.gender = sexTargeted;
 		this.conditions = conditions;
 		this.link = link;
 		this.place = place;
@@ -78,11 +78,11 @@ public class Trial  implements Serializable{
 		this.status = status;
 	}
 
-	public Date getStart() {
+	public String getStart() {
 		return start;
 	}
 
-	public void setStart(Date start) {
+	public void setStart(String start) {
 		this.start = start;
 	}
 
@@ -94,12 +94,12 @@ public class Trial  implements Serializable{
 		this.ageRange = ageRange;
 	}
 
-	public String getSexTargeted() {
-		return sexTargeted;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setSexTargeted(String sexTargeted) {
-		this.sexTargeted = sexTargeted;
+	public void setGender(String sexTargeted) {
+		this.gender = sexTargeted;
 	}
 
 	public String getConditions() {
